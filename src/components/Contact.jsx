@@ -12,7 +12,7 @@ export default function Contact({activeKey}){
       setLoading(true);
       try{
         const data = {email,help};
-        const req =  await fetch("http://localhost:5000/contact",{
+        const req =  await fetch("https://server-eta-nine-44.vercel.app/api/contact",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(data)
@@ -89,4 +89,5 @@ export default function Contact({activeKey}){
        }
      </AnimatePresence>
     )
+
 }
