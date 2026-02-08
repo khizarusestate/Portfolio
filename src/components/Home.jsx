@@ -26,9 +26,10 @@ const iconsAnimationsHandler = (index)=>{return index === 0? -240 : index === 1?
               <motion.h2 initial={{clipPath:"inset(0 100% 0 0)"}} animate={isTitleAnimation?{clipPath:"inset(0 0 0 0)",y:activeKey>0?-250:0}:undefined} transition={{duration:0.3}} className="absolute top-[57%] left-[40%] text-[30px] text-purple-300 text-shadow-[0_0_10px_rgb(255,0,255)]">Software Engineer</motion.h2> 
               {
                  icon.map((items,index)=>(
-                     <motion.img key={index} initial={{y:-1000}} animate={isFallingAnimation?{y:0,x:isIconsAnimations?iconsAnimationsHandler(index):0,opacity:activeKey>0?0:1}:undefined} onAnimationComplete={index===3?()=>setIconsAnimations(true):undefined} src={`./assets/${items}.png`} alt={items} className={ ` ${!isIconsAnimations&&index!==3?"hidden":"block"} h-[50px] absolute top-[73%] left-[48%] ${index===3?"z-10":""} drop-shadow-[0_0_10px_rgb(100,200,255)]`}/>
+                     <motion.img key={index} initial={{y:-1000}} animate={isFallingAnimation?{y:0,x:isIconsAnimations?iconsAnimationsHandler(index):0,opacity:activeKey>0?0:1}:undefined} onAnimationComplete={index===3?()=>setIconsAnimations(true):undefined} src={`./assets/${items}.png`} alt={items} className={ ` ${!isIconsAnimations&&index!==3?"hidden":"block"} h-[50px] absolute top-[73%] left-[48%] drop-shadow-[0_0_10px_rgb(100,200,255)]`}/>
                ))}
                <motion.div initial={{scaleX:0,scaleY:0}} animate={{scaleX:1,scaleY:1}} transition={{duration:2}} className={`${isIconsAnimations?"hidden":"block"} absolute top-[73%] left-[48%] h-[50px] w-[50px] rounded-[50%] bg-[rgba(0,0,0,0.4)]`}></motion.div>
         </section>
     )
+
 }
