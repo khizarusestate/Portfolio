@@ -47,10 +47,10 @@ export default function Contact({activeKey}){
                  <textarea placeholder="How can I help you?" value={help} onChange={(e)=>setHelp(e.target.value)} required className="h-[150px] w-[500px] text-center rounded-[10px] outline-none bg-[rgba(100,200,255,0.2)] shadow-[0_0_10px_rgb(100,200,255)] z-30 "></textarea>
                  <button type='submit' className='h-[40px] w-[100px] rounded-[10px] text-purple-900 font-bold text-[20px] bg-blue-200 hover:scale-120 duration-200 hover:text-blue-200 hover:bg-purple-900 active:scale-100 cursor-pointer z-30' onClick={()=>audioController.current.play()}>Submit</button>
               </motion.form>
-              <motion.article initial={{y:100,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.5}} exit={{y:100,opacity:0}} className="absolute top-[84%] left-[27%] p-[10px] flex gap-[50px] rounded-[10px]  z-30 shadow-[0_0_10px_rgb(100,200,255)]">
+              <motion.article initial={{y:100,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.5}} exit={{y:100,opacity:0}} className="absolute top-[84%] left-[27%] flex gap-[50px]  z-30">
               {
                 contact.map((items,index)=>(
-                  <a  key={index} href={items.href} className="flex justify-center items-center text-blue-200 gap-[10px] bg-[rgba(100,200,255,0.2)] shadow-[0_0_10px_rgb(100,200,255)]">
+                  <a  key={index} href={items.href} className="flex justify-center items-center text-blue-200 gap-[10px] p-[5px] rounded-[5px]  bg-[rgba(100,200,255,0.2)] shadow-[0_0_10px_rgb(100,200,255)] duration-300 hover:scale-120 active:scale-100">
                      <p>{items.icon}</p>
                      <img src={items.img} className={`${index!==3?"hidden":"block"} h-[30px]`}  />
                      <h1>{items.title}</h1>
@@ -91,5 +91,6 @@ export default function Contact({activeKey}){
     )
 
 }
+
 
 
