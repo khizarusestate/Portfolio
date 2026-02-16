@@ -1,6 +1,6 @@
 import { motion,AnimatePresence } from "framer-motion"
 export default function Portfolio({activeKey}){
-    const portfolio = [{title:"The Forge",disc:"A Landing page for Gymnasium",tech:["React.JS","Node.JS","TailwindCSS"],link:"https://theforge.vercel.app"},{title:"InoByte",disc:"A Porfolio Page for IT Company",tech:["React.JS","Node.JS","TailwindCSS"],link:"https://inobyte.vercel.app"},{title:"HealthSpire",disc:"Portflio Page for Medical Software",tech:["React.JS","Node.JS","TailwindCSS"],link:"https://healthspire.vercel.app"}];
+    const portfolio = [{title:"The Forge",disc:"A Landing page for Gymnasium",tech:["React.JS","Node.JS","TailwindCSS"],link:"https://the-forge2.vercel.app"},{title:"InoByte",disc:"A Porfolio Page for IT Company",tech:["React.JS","Node.JS","TailwindCSS"],link:"https://inobyte.vercel.app"},{title:"HealthSpire",disc:"Portflio Page for Medical Software",tech:["React.JS","Node.JS","TailwindCSS"],link:"https://healthspire.vercel.app"}];
     return(
     <AnimatePresence>
         {
@@ -29,4 +29,5 @@ export default function Portfolio({activeKey}){
         }
      </AnimatePresence>
     )
+
 }
